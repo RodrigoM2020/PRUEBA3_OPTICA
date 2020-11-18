@@ -1,0 +1,55 @@
+.ancho-100 {
+    width: 100%;
+  }
+  
+  .input-field label{
+    color: bisque; 
+  }
+  
+  .input-field input:focus {
+    border-bottom: 1px solid rgb(238, 9, 9) !important;
+    box-shadow: 0 1px 0 0 rgb(245, 7, 7) !important;
+  }
+  .fondo{
+    background-image: url(https://image.freepik.com/foto-gratis/lentes-sobre-fondo-rosa_70287-2741.jpg);
+    background-repeat: repeat;
+         
+  }
+  .fondo-registro{
+    background-image: url(/imagen/registrousuario.jpg);
+             
+  }
+  .fondo2{
+   background-color: teal;        
+  }
+  .fondo3{
+    background-color: blueviolet;
+  }
+
+  .img_1{
+    margin-top: 30px;
+  }
+
+  .vertical-center {
+    padding-left: 35%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    
+  }
+  .container-1 {
+    height: 200px;
+    position: relative;
+    border: 3px solid rgb(197, 7, 64);
+    padding-top: 33%;
+  }
+  .texto{
+    font-family: 'Architects Daughter', cursive;
+      }
+
+.h3-color{
+  color: rgba(207, 47, 47, 0.966);
+}
+ .h3-c{
+  color: bisque;
+}    
