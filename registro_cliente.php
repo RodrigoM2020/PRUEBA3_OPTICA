@@ -67,7 +67,7 @@
 
                     <button class="btn pink ancho-100">Registrar Cuenta</button>
                     <p class="center">
-                        <a href="optica_menu.php">Volver al Menu</a>
+                        <a href="SubMenu_usuario.php">Volver al Menu</a>
                     </p>
                 </form>
 

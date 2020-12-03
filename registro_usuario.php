@@ -14,7 +14,7 @@ $vendedor = $modelo->listarTareas();?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Registro Usuario</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -60,7 +60,7 @@ $vendedor = $modelo->listarTareas();?>
                     </div>
                     <button class="btn pink ancho-100">Registrar Cuenta</button>
                     <p class="center">
-                        <a href="optica_menu.php">Volver</a>
+                        <a href="index.php">Volver</a>
                     </p>       
                 </form> 
                                     

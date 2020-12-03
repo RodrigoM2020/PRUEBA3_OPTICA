@@ -7,11 +7,11 @@
   }
   
   .input-field input:focus {
-    border-bottom: 1px solid rgb(238, 9, 9) !important;
-    box-shadow: 0 1px 0 0 rgb(245, 7, 7) !important;
+    border-bottom: 1px solid rgb(189, 107, 236) !important;
+    box-shadow: 0 1px 0 0 rgb(214, 128, 231) !important;
   }
   .fondo{
-    background-image: url(https://image.freepik.com/foto-gratis/lentes-sobre-fondo-rosa_70287-2741.jpg);
+    background-image: url(/imagen/fondoprincipal.jpg);
     background-repeat: repeat;
          
   }
@@ -33,14 +33,14 @@
   .vertical-center {
     padding-left: 35%;
     margin: 0;
-    position: absolute;
-    top: 50%;
+    position: relative;
+    top: 10%;
     
   }
   .container-1 {
     height: 200px;
     position: relative;
-    border: 3px solid rgb(197, 7, 64);
+    border: 3px solid rgb(218, 231, 96);
     padding-top: 33%;
   }
   .texto{

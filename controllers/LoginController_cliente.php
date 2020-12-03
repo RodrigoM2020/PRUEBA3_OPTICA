@@ -35,7 +35,7 @@ class LoginController
             return;
         }
             $_SESSION['cliente'] = $array[0];
-             header("Location: ../registro_cliente.php");
+             header("Location: ../SubMenu_usuario.php");
 
         
 

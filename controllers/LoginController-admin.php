@@ -37,7 +37,7 @@ class LoginController
             return;
         }
             $_SESSION['usuario'] = $array[0];
-             header("Location: ../optica_menu.php");
+             header("Location: ../registro_usuario.php");
  
     }
 }
