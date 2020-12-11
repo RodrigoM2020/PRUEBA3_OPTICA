@@ -3,7 +3,7 @@
 namespace controllers;
 use models\UsuarioModel as UsuarioModel;
 
-require_once("../models/UsuarioModel_cliente.php");
+require_once("../models/UsuarioModel.php");
 
 class RegistroController_usuario
 {
@@ -40,7 +40,7 @@ class RegistroController_usuario
         $modelo = new UsuarioModel();
 
         $data = ['rut' => $this->rut,'nombre' => $this->nombre,'rol' => $this->rol,'clave' => $this->clave,'estado' => $this->estado];
-        $count = $modelo->insertarUsuario($data);
+        $count = $modelo->insertarUsuarioVendedor($data);
 
         if ($count == 0 ) {
                        $_SESSION['error'] = "Hubo un error en la base de datos";

@@ -16,7 +16,7 @@
 
             </div>
             <div class="col l4 m8 s12 center">
-                <img width="50" src="https://lh3.googleusercontent.com/proxy/uHzs2HTxFKknTXw_7lG1d9mdsx1Fa6UwgZMZ9_apmiUyN2_w7EXPUxoDkfjPQRxt3khae4Ldz8EU8JKj2K37d-GuY_awInbiY6I" alt="">
+                <img width="50" src="https://aseisdedos.com/wp-content/uploads/2020/01/Tipos-de-clientes.png" alt="">
                 <h5 class="center h3-c">Registro Clientes</h5>
                
                 <p class="red-text">
@@ -66,8 +66,8 @@
                     </div>
 
                     <button class="btn pink ancho-100">Registrar Cuenta</button>
-                    <p class="center">
-                        <a href="SubMenu_usuario.php">Volver al Menu</a>
+                    <p class="center ">
+                        <a href="SubMenu_usuario.php">Volver al Menu Clientes</a>
                     </p>
                 </form>
 

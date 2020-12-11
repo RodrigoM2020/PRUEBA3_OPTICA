@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
   
-    <title>Document</title>
+    <title>Index</title>
 </head>
 <body class="fondo">
-                <h3 class="center texto h3-color">OPTICA CENTRAL</h3>
+    
+    
+                <h3 class="center texto h3-color">OPTICA CENTRAL </h3>
                 <h5 class="center texto h3-color" >Recetas-Lentes Ópticos-Lentes de Sol</h5>
 
                  
@@ -20,7 +22,7 @@
                     <nav>
                         <ul>
                             <li><a href="inicio_sesion_admin.php">Acceso  como Administrador</a></li>
-                            <li><a href="inicioSesion_cliente.php">Acceso como Usuarior</a></li>
+                            <li><a href="inicioSesion_cliente.php">Acceso como Usuario</a></li>
                             <li><a href="salir.php">Salir</a></li>
                         </ul>
                     </nav>

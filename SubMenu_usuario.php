@@ -12,12 +12,12 @@
 </head>
 <body class="fondo3">
                 <h3 class="center texto h3-c">OPTICA CENTRAL</h3>
-                <h5 class="center texto h3-c" >Recetas-Lentes Ópticos-Lentes de Sol</h5>
+                <h5 class="center texto h3-c" >SubMenu Clientes</h5>
 
                  
-           <div class="container-1">
+          
              <div class="vertical-center">
-                    <nav>
+                    <nav >
                         <ul>
                             <li><a href="registro_cliente.php">Crear Clientes</a></li>
                             <li><a href="receta.php">Buscar Receta</a></li>
@@ -26,7 +26,7 @@
                         </ul>
                     </nav>
                  </div>
-            </div>
+          
                    
 </body>
 </html>

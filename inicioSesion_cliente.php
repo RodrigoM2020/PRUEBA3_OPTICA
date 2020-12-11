@@ -20,7 +20,7 @@
             </div>
             <div class="col l4 m4 s12 center">
                 <img class="img_1"  width="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/1200px-User_icon_2.svg.png" alt="">
-                <h3 class="center h3-c">Acceso a Clientes</h3>
+                <h3 class="center h3-c">Acceso Usuarios</h3>
                 <h5 class="center h3-c">Optica Central</h5>
 
 
@@ -35,10 +35,14 @@
                     ?>
                 </p>
 
-                <form action="controllers/LoginController_cliente.php" method="POST">
+                <form action="controllers/LoginController_usuario.php" method="POST">
                     <div class="input-field">
                         <input id="rut" type="text" name="rut">
                         <label  for="rut">RUT</label>
+                    </div>
+                    <div class="input-field">
+                        <input id="clave" type="text" name="clave">
+                        <label  for="rut">CLAVE</label>
                     </div>
                    
                     <button class="btn ancho-100">Iniciar Sesión</button>

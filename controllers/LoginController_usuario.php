@@ -4,44 +4,47 @@ namespace controllers;
 
 use models\UsuarioModel as UsuarioModel;
 
+
 require_once("../models/UsuarioModel.php");
 
 class LoginController
 {
     public $rut;
+    public $clave;
    
 
     public function __construct()
     {
         $this->rut = $_POST['rut'];
-      
+        $this->clave = $_POST['clave'];
     }
 
     public function iniciarSesion()
     {
         session_start();
-        if ($this->rut == "" ) {
+        if ($this->rut == "" || $this->clave=="" ) {
             $_SESSION['error'] = "Complete los datos";
             header("Location: ../inicioSesion_cliente.php");
             return;
         }
 
         $modelo = new UsuarioModel();
-        $array = $modelo->buscarUsuarioLogin($this->rut);
-       
+        
+        $array = $modelo->buscarVendedor($this->rut, $this->clave);
+        
         if (count($array) == 1) {
             $_SESSION['error'] = "rut o clave no se encuentra";
-            header("Location: ../inicioSesion_cliente.php");
+            header("Location: ../index.php");
             return;
         }
-            $_SESSION['cliente'] = $array[0];
+            $_SESSION['usuario'] = $array[0];
              header("Location: ../SubMenu_usuario.php");
-
-        
-
-        
+ 
     }
+
+       
 }
+
 
 $obj = new LoginController();
 $obj->iniciarSesion();

@@ -3,7 +3,7 @@
   }
   
   .input-field label{
-    color: bisque; 
+    color: rgb(243, 243, 245); 
   }
   
   .input-field input:focus {
@@ -11,9 +11,10 @@
     box-shadow: 0 1px 0 0 rgb(214, 128, 231) !important;
   }
   .fondo{
-    background-image: url(/imagen/fondoprincipal.jpg);
+    background-image: url(https://previews.123rf.com/images/9dreamstudio/9dreamstudio1809/9dreamstudio180901566/108576043-glasses-with-transparent-optical-lenses-on-yellow-background-top-view-copy-space.jpg);
     background-repeat: repeat;
-         
+    width: 100%;
+          
   }
   .fondo-registro{
     background-image: url(/imagen/registrousuario.jpg);
@@ -23,7 +24,7 @@
    background-color: teal;        
   }
   .fondo3{
-    background-color: blueviolet;
+    background-color: rgb(238, 230, 120);
   }
 
   .img_1{
@@ -31,12 +32,24 @@
   }
 
   .vertical-center {
-    padding-left: 35%;
+   padding-right: 35%;
+   margin-left: 30%;
+          
+  }
+  
+  .vertical-center2 {
+    padding-right: 35%;
+   margin-left: 30%;
+    justify-content: center;
+    padding-left: 50%;
     margin: 0;
     position: relative;
     top: 10%;
     
   }
+  
+ 
+
   .container-1 {
     height: 200px;
     position: relative;
@@ -48,8 +61,9 @@
       }
 
 .h3-color{
-  color: rgba(207, 47, 47, 0.966);
+  color:rgb(145, 103, 13);
+
 }
  .h3-c{
-  color: bisque;
+  color: rgb(57, 147, 250);
 }    

@@ -45,7 +45,9 @@
                         <label for="clave">CLAVE</label>
                     </div>
                     <button class="btn ancho-100">Iniciar Sesión</button>
-
+                    <p class="center">
+                        <a href="index.php">Volver al Menú</a>
+                    </p>
                  
                     <p>
                     <?php

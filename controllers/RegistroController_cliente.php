@@ -1,9 +1,10 @@
 <?php
 
 namespace controllers;
-use models\UsuarioModel as UsuarioModel;
+use models\Cliente_Model as Cliente_Model;
 
-require_once("../models/UsuarioModel.php");
+
+require_once("../models/Cliente_Model.php");
 
 class RegistroController_cliente
 {
@@ -33,9 +34,9 @@ class RegistroController_cliente
             return;
         }
        
-        $modelo = new UsuarioModel();
+        $modelo = new Cliente_Model();
         $data = ['rut' => $this->rut,'nombre' => $this->nombre,'direccion' => $this->direccion,'fono' => $this->fono,'fecha' => $this->fecha, 'email'=>$this->email];
-        $count = $modelo->insertarUsuario($data);
+        $count = $modelo->insertarCliente($data);
 
         if ($count == 0)
          {          
@@ -43,6 +44,7 @@ class RegistroController_cliente
         }else{
             $_SESSION['respuesta'] = "Registro Guardado";
         }
+        $_SESSION['cliente'] = $array[0];
         header("Location: ../registro_cliente.php");
     }
 }

@@ -4,7 +4,7 @@ namespace controllers;
 
 use models\UsuarioModel as UsuarioModel;
 
-require_once("../models/UsuarioModel_cliente.php");
+require_once("../models/UsuarioModel.php");
 
 class LoginController
 {
@@ -29,7 +29,7 @@ class LoginController
 
         $modelo = new UsuarioModel();
         
-        $array = $modelo->buscarUsuarioLogin($this->rut, $this->clave);
+        $array = $modelo->buscarVendedor($this->rut, $this->clave);
         
         if (count($array) == 1) {
             $_SESSION['error'] = "rut o clave no se encuentra";

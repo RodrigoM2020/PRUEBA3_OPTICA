@@ -2,10 +2,10 @@
 
 use models\UsuarioModel as UsuarioModel;
 
-require_once("models/UsuarioModel_cliente.php");
+require_once("models/UsuarioModel.php");
 
 $modelo =new UsuarioModel();
-$vendedor = $modelo->listarTareas();?>
+$vendedor = $modelo->listarUsuarios();?>
 
 
 <!DOCTYPE html>
