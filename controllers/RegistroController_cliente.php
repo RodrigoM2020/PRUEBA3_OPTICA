@@ -44,7 +44,7 @@ class RegistroController_cliente
         }else{
             $_SESSION['respuesta'] = "Registro Guardado";
         }
-        $_SESSION['cliente'] = $array[0];
+       $_SESSION['cliente'] = $data[0];
         header("Location: ../registro_cliente.php");
     }
 }

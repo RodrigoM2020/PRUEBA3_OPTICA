@@ -18,14 +18,28 @@ class BuscarRecetaRut
     public function buscarRecetaRut()
     {
 
-        session_start();
+         session_start();
+        if ($this->rut == ""  ) {
+            $_SESSION['error_buscar'] = "Complete los datos";
+            header("Location: ../registro_cliente.php");
+            return;
+        }
         $modelo = new RecetaModel();
         $arr = $modelo->buscarRecetaXRut($this->rut);
-        $_SESSION["receta_rut"] = $arr;
+        
+        if (count($arr) == 0) {
+            $_SESSION['error_buscar'] = "rut o clave no se encuentra";
+            header("Location: ../registro_cliente.php");
+            return;
+        }else{
+            $_SESSION['receta_rut'] = $arr[0];
+            header("Location: ../receta.php");
 
-        header("Location: ../index.php");
+        }
+           
+           }
     }
-}
+
 
 $obj = new BuscarRecetaRut();
 $obj->buscarRecetaRut();

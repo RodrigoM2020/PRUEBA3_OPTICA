@@ -31,9 +31,9 @@ class LoginController
         
         $array = $modelo->buscarVendedor($this->rut, $this->clave);
         
-        if (count($array) == 1) {
+        if (count($array) == 0) {
             $_SESSION['error'] = "rut o clave no se encuentra";
-            header("Location: ../index.php");
+            header("Location: ../Inicio_sesion_admin.php");
             return;
         }
             $_SESSION['usuario'] = $array[0];

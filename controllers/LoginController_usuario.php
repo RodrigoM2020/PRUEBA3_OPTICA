@@ -34,7 +34,7 @@ class LoginController
         
         if (count($array) == 1) {
             $_SESSION['error'] = "rut o clave no se encuentra";
-            header("Location: ../index.php");
+            header("Location: ../inicio_Sesion_cliente.php");
             return;
         }
             $_SESSION['usuario'] = $array[0];

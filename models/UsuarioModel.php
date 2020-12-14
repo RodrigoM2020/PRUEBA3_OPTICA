@@ -19,7 +19,7 @@ public function buscarVendedor($rut, $clave)
 {
     $stm = Conexion::conector()->prepare("SELECT * FROM usuario WHERE rut=:A AND clave=:B");
     $stm->bindParam(":A", $rut);
-    $stm->bindParam(";B",md5($clave));
+    $stm->bindParam(":B",md5($clave));
    $stm->execute();
     return $stm->fetchAll(\PDO::FETCH_ASSOC);
 }
@@ -30,13 +30,6 @@ public function listarUsuarios()
     return $stm->fetchAll(\PDO::FETCH_ASSOC);
 }
 
-public function buscarVendedor($rut,$clave)
-{
-    $stm = Conexion::conector()->prepare("SELECT * FROM usuario WHERE rut=:A, clave=:B");
-    $stm->bindParam(":A", $rut);
-    $stm->bindParam(":B", $clave);
-    $stm->execute();
-    return $stm->fetchAll(\PDO::FETCH_ASSOC);
-}
+
 
 }
