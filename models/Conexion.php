@@ -5,9 +5,10 @@ namespace models;
 
 class Conexion
 {
-    public static $user = "uvhmgltrwlae54qy";
-    public static $pass = "NzhJVHndpsNVjIv1H1qw";
-    public static $URL = "mysql:host=b0a2qswlhunlsmmyinig-mysql.services.clever-cloud.com;dbname=b0a2qswlhunlsmmyinig";
+    public static $user = "root";
+    public static $pass = "";
+    public static $URL = "mysql:host=localhost;dbname=optica_2020";
+    
 
     public static function conector()
     {

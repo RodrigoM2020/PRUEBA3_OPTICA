@@ -1,8 +1,11 @@
 <?php
+
 namespace models;
 require_once("Conexion.php");
+
 class UsuarioModel
 {
+
 public function insertarUsuarioVendedor($data)
 {
     $stm = Conexion::conector()->prepare("INSERT INTO usuario VALUES(:A,:B,:C,:D,:E)");
@@ -11,9 +14,9 @@ public function insertarUsuarioVendedor($data)
     $stm->bindParam(":C", $data['rol']);
     $stm->bindParam(":D", md5($data['clave']));
     $stm->bindParam(":E", $data['estado']);
-   
-    return $stm->execute();
+       return $stm->execute();
 }
+
 
 public function buscarVendedor($rut, $clave)
 {

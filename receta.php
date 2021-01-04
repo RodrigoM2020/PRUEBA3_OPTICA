@@ -19,6 +19,7 @@ session_start();
         <div class="row">
             <div class="col l2 m12 s12"></div>
             <div class="col l8 m12 s12 center">
+            <a class="btn-small"href="insertar_receta.php">crear receta</a>
                 <h4>Buscar Receta por rut</h4>
                 <form action="controllers/BuscarRecetaRut.php" method="POST">
                     <input type="text" placeholder="Rut Cliente" name="rut">
@@ -27,11 +28,11 @@ session_start();
                 </form>
                 <p>
 
-                    <?php if (isset($_SESSION['receta_rut'])) { ?>
-                        <?php $receta_list = $_SESSION['receta_rut'];  ?>
+                    <?php if (isset($_SESSION['receta'])) { ?>
+                        <?php $receta_list = $_SESSION['receta'];  ?>
                         <?php print_r($receta_list); 
                         ?>
-                        <form action="controllers/BuscarRecetaId.php" method="POST">
+                        <form action="#" method="POST">
                             <table>
                                 <tr>
                                     <th>Cliente</th>

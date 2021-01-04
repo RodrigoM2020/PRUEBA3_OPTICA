@@ -42,13 +42,17 @@ class RegistroController_usuario
         $data = ['rut' => $this->rut,'nombre' => $this->nombre,'rol' => $this->rol,'clave' => $this->clave,'estado' => $this->estado];
         $count = $modelo->insertarUsuarioVendedor($data);
 
-        if ($count == 0 ) {
-                       $_SESSION['error'] = "Hubo un error en la base de datos";
-                   }else{
-                    $_SESSION['respuesta'] = "Registro guardado....";
-
-                   }
+        if ($count == 0)
+         {          
+            $_SESSION['error'] = "Hubo un error en la base de datos";
+        }else{
+            $_SESSION['respuesta'] = "Registro Guardado";
+        }
+       $_SESSION['usuario'] = $data[0];
         header("Location: ../registro_usuario.php");
+       
+       
+       
     }
 }
 

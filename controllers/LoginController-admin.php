@@ -23,7 +23,7 @@ class LoginController
         session_start();
         if ($this->rut == "" || $this->clave=="") {
             $_SESSION['error'] = "Complete los datos";
-            header("Location: ../index.php");
+            header("Location: ../Inicio_sesion_admin.php");
             return;
         }
 

@@ -8,9 +8,33 @@ class RecetaModel
 {
 
     public function insertarReceta($data)
-
-
-    {
+       {
+        $stm = Conexion::conector()->prepare("INSERT INTO receta VALUES(:A,:B,:C,:D,:E,:F,:G,:H,:I,:J,:K,:L,:M,:N,:O,:P,:Q,:R,:S,:T,:U,:V)");
+        $stm->bindParam(":A", $data['tipo_lente']);
+        $stm->bindParam(":B", $data['esfera_oi']);
+        $stm->bindParam(":C", $data['esfera_od']);
+        $stm->bindParam(":D", $data['cilindro_oi']);
+        $stm->bindParam(":E", $data['cilindro_od']);
+        $stm->bindParam(":F", $data['eje_oi']);
+        $stm->bindParam(":G", $data['eje_od']);
+        $stm->bindParam(":H", $data['prisma']);
+        $stm->bindParam(":I", $data['base']);
+        $stm->bindParam(":J", $data['armazon']);
+        $stm->bindParam(":K", $data['material_cristal']);
+        $stm->bindParam(":L", $data['tipo_cristal']);
+        $stm->bindParam(":M", $data['distancia_pipilar']);
+        $stm->bindParam(":N", md5($data['valor_lente']));
+        $stm->bindParam(":O", $data['fecha_entrega']);
+        $stm->bindParam(":P", $data['fecha_retiro']);
+        $stm->bindParam(":Q", $data['rut_cliente']);
+        $stm->bindParam(":R", $data['fecha_visita_medico']);
+        $stm->bindParam(":S", $data['rut_medico']);
+        $stm->bindParam(":T", $data['nombre_medico']);
+        $stm->bindParam(":U", $data['rut_usuario']);
+        $stm->bindParam(":V", $data['estado']);
+       
+          
+        return $stm->execute();
     }
 
     public function buscarRecetaXRut($rut)
