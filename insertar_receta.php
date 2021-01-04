@@ -19,8 +19,13 @@ session_start();
             <div class="row">
              <div class="col l4 m4 s12 ">
 
-    <form action="controller/BuscarClienteRut.php" method="POST">
-          <input type="text" name="rut" placeholder="Rut Cliente"/>
+    <form action="controllers/BuscarClienteRut.php" method="POST">
+          <input type="text" 
+          name="rut" 
+          placeholder="Rut Cliente"
+          value="<?= isset($_SESSION['cliente']) ? $_SESSION['cliente']['rut_cliente']: '' ?>"
+          
+          />
         <button class="btn-small">Buscar</button>
     </form>
     
@@ -37,6 +42,26 @@ session_start();
 
 }
 ?>
+
+<?php if(isset($_SESSION['cliente'])){ ?>
+    <div class="collection">
+        <a href="#!" class="collection-item">
+            Nombre:
+        <?=$_SESSION['cliente']['nombre_cliente']?>
+    </a>
+   
+        <a href="#!" class="collection-item">
+            Teléfono
+        <?=$_SESSION['cliente']['telefono_cliente']?>
+    </a>
+          </div>
+
+    <?php
+    unset($_SESSION['cliente']);
+
+}?>
+
+
     </div>
 </div>    
         </div>

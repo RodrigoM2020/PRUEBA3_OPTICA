@@ -20,11 +20,11 @@ $this->rut = $_POST['rut'];
 
     if(count($arr)==0){
         $_SESSION['error']="Rut no existe";
-        header(("Location: ../insertar_receta.php");
+        header("Location: ../insertar_receta.php");
         return;
     }
     $_SESSION['cliente'] = $arr[0];
-    header(("Location: ../insertar_receta.php");
+    header("Location: ../insertar_receta.php");
  }
 
 }
