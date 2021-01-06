@@ -21,7 +21,7 @@
                         <ul>
                             <li><a href="registro_cliente.php">Crear Clientes</a></li>
                             <li><a href="receta.php">Buscar Receta</a></li>
-                            <li><a href="#">Ingreso</a></li>
+                            <li><a href="insertar_receta.php">Ingresar Receta</a></li>
                             <li><a href="index.php">Salir</a></li>
                         </ul>
                     </nav>

@@ -1,5 +1,17 @@
 <?php
+
+use models\RecetaModel;
+
+require_once("models/RecetaModel.php");
 session_start();
+
+$model = new RecetaModel();
+
+$tipos = $model->getTipos();
+$armazon = $model->getArmazones();
+$materiales = $model->getMateriales();
+$base = ['No Aplica', 'Superior','Inferior', 'Interna','Externa'];
+
 ?>
 
 <!DOCTYPE html>
@@ -64,9 +76,61 @@ session_start();
 
     </div>
 </div>    
+
+
+</div>
+<form action="#" method="POST"
+<div class="card-panel">
+
+    <div class="row">
+        <div class="col l12 m12 s12">
+            Tipo de Lentes
+            <p>
+                <label >
+                    <input type="checkbox" name="tipo_lente" value="Cerca"/>
+                    <span>Cerca</span>
+                </label>
+                &nbsp;&nbsp;
+                <label >
+                    <input type="checkbox" name="tipo_lente" value="Lejos"/>
+                    <span>Lejos</span>
+                </label>
+
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col l3 m3 s12">
+            Tipo Cristal
+        <select name="tipo_cristal" >
+        <?php foreach($tipos as $tipo){ ?>
+                <option value="<?=$tipo['id_tipo_cristal']?>"><?=$tipo['tipo_cristal']?></option>
+        <?php } ?>
+        </select>
+             Base
+        <select name="base" >
+        <?php foreach($base as $b){ ?>
+                <option value="<?=$b ?>"><?=$b ?></option>
+        <?php } ?>
+        </select>
+       </div>
+
+        <div class="col l3 m3 s12"></div>
+        <div class="col l3 m3 s12"></div>
+        <div class="col l3 m3 s12"></div>
+        </div>
+    </div>
+    </form>
         </div>
 
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+     document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+  });
+</script>
 
 </body>
 </html>
